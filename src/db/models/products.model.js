@@ -37,7 +37,7 @@ const ProductSchema = {
   },
   photoURL: {
     allowNull: true,
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     field: "photoURL",
   },
 };
