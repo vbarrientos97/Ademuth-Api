@@ -29,6 +29,12 @@ class PersonsService {
     await model.destroy();
     return { deleted: true };
   }
+
+  async findByUsername(username) {
+    return models.Person.findOne({
+      where: { username },
+    });
+  }
 }
 
 module.exports = PersonsService;

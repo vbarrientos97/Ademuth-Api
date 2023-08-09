@@ -50,10 +50,36 @@ const _delete = async (req, res) => {
   }
 };
 
+const login = async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const user = await service.findByUsername(username);
+
+    if (!user) {
+      res
+        .status(401)
+        .json({ success: false, message: "Usuario no encontrado." });
+      return;
+    }
+
+    if (user.password !== password) {
+      res
+        .status(401)
+        .json({ success: false, message: "Contraseña incorrecta." });
+      return;
+    }
+
+    res.json({ success: true, message: "Inicio de sesión exitoso.", user });
+  } catch (error) {
+    res.status(500).send({ success: false, message: error.message });
+  }
+};
+
 module.exports = {
   create,
   get,
   getById,
   update,
   _delete,
+  login,
 };

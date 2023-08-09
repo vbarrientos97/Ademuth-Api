@@ -25,15 +25,36 @@ const PersonSchema = {
     type: DataTypes.STRING,
     field: "name",
   },
-  address: {
+  lastname: {
     allowNull: false,
     type: DataTypes.STRING,
-    field: "address",
+    field: "lastname",
+  },
+  email: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "email",
+  },
+  username: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "username",
+    unique: true,
+  },
+  password: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "password",
   },
   phone: {
-    allowNull: true,
-    type: DataTypes.INTEGER,
+    allowNull: false,
+    type: DataTypes.STRING,
     field: "phone",
+  },
+  isAdmin: {
+    allowNull: false,
+    type: DataTypes.BOOLEAN,
+    field: "isAdmin",
   },
 };
 

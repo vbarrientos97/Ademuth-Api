@@ -6,6 +6,8 @@ router
   .get("/", personsController.get)
   .get("/:id", personsController.getById)
   .post("/", personsController.create)
+  .post("/register", personsController.create)
+  .post("/login", personsController.login)
   .put("/:id", personsController.update)
   .delete("/:id", personsController._delete);
 

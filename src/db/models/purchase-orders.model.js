@@ -20,15 +20,15 @@ const PurchaseOrderSchema = {
     primaryKey: true,
     type: DataTypes.INTEGER,
   },
-  customer: {
+  customerName: {
     allowNull: false,
     type: DataTypes.STRING,
-    field: "customer",
+    field: "customerName",
   },
-  article: {
-    allowNull: false,
+  customerLastname: {
+    allowNull: true,
     type: DataTypes.STRING,
-    field: "article",
+    field: "customerLastname",
   },
   size: {
     allowNull: false,
@@ -40,15 +40,30 @@ const PurchaseOrderSchema = {
     type: DataTypes.STRING,
     field: "color",
   },
-  image: {
-    allowNull: false,
-    type: DataTypes.STRING,
-    field: "image",
+  localDesign: {
+    allowNull: true,
+    type: DataTypes.TEXT,
+    field: "localDesign",
+  },
+  customDesign: {
+    allowNull: true,
+    type: DataTypes.TEXT,
+    field: "customDesign",
   },
   amount: {
     allowNull: true,
     type: DataTypes.INTEGER,
     field: "amount",
+  },
+  comments: {
+    allowNull: true,
+    type: DataTypes.TEXT,
+    field: "comments",
+  },
+  demoDesign: {
+    allowNull: true,
+    type: DataTypes.TEXT,
+    field: "demoDesign",
   },
 };
 
