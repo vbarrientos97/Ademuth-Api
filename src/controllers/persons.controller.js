@@ -69,7 +69,20 @@ const login = async (req, res) => {
       return;
     }
 
-    res.json({ success: true, message: "Inicio de sesión exitoso.", user });
+    res.json({
+      success: true,
+      message: "Inicio de sesión exitoso.",
+      user,
+      isAdmin: user.isAdmin,
+    });
+  } catch (error) {
+    res.status(500).send({ success: false, message: error.message });
+  }
+};
+
+const logout = async (req, res) => {
+  try {
+    res.json({ success: true, message: "Cierre de sesión exitoso." });
   } catch (error) {
     res.status(500).send({ success: false, message: error.message });
   }
@@ -82,4 +95,5 @@ module.exports = {
   update,
   _delete,
   login,
+  logout,
 };
