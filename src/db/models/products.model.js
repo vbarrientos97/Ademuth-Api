@@ -25,6 +25,11 @@ const ProductSchema = {
     type: DataTypes.STRING,
     field: "name",
   },
+  size: {
+    allowNull: false,
+    type: DataTypes.STRING,
+    field: "size",
+  },
   description: {
     allowNull: false,
     type: DataTypes.STRING,
@@ -34,6 +39,11 @@ const ProductSchema = {
     allowNull: true,
     type: DataTypes.INTEGER,
     field: "price",
+  },
+  amount: {
+    allowNull: true,
+    type: DataTypes.INTEGER,
+    field: "amount",
   },
   photoURL: {
     allowNull: true,

@@ -16,9 +16,8 @@ class PurchaseOrder extends Model {
 const PurchaseOrderSchema = {
   id: {
     allowNull: false,
-    autoIncrement: true,
     primaryKey: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
   },
   customerName: {
     allowNull: false,
@@ -30,40 +29,14 @@ const PurchaseOrderSchema = {
     type: DataTypes.STRING,
     field: "customerLastname",
   },
-  size: {
-    allowNull: false,
-    type: DataTypes.STRING,
-    field: "size",
+  products: {
+    type: DataTypes.ARRAY(DataTypes.JSONB),
+    field: "products",
   },
-  color: {
-    allowNull: false,
-    type: DataTypes.STRING,
-    field: "color",
-  },
-  localDesign: {
-    allowNull: true,
-    type: DataTypes.TEXT,
-    field: "localDesign",
-  },
-  customDesign: {
-    allowNull: true,
-    type: DataTypes.TEXT,
-    field: "customDesign",
-  },
-  amount: {
+  totalPrice: {
     allowNull: true,
     type: DataTypes.INTEGER,
-    field: "amount",
-  },
-  comments: {
-    allowNull: true,
-    type: DataTypes.TEXT,
-    field: "comments",
-  },
-  demoDesign: {
-    allowNull: true,
-    type: DataTypes.TEXT,
-    field: "demoDesign",
+    field: "totalPrice",
   },
 };
 
