@@ -35,7 +35,7 @@ const PurchaseOrderSchema = {
   },
   totalPrice: {
     allowNull: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL,
     field: "totalPrice",
   },
 };

@@ -8,5 +8,4 @@ router
   .post("/", tshirtsController.create)
   .put("/:id", tshirtsController.update)
   .delete("/:id", tshirtsController._delete);
-
 module.exports = router;

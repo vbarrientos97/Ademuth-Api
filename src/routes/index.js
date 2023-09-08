@@ -6,6 +6,8 @@ const productsRouter = require("./products.router");
 const colorsRouter = require("./colors.router");
 const localDesignsRouter = require("./local-designs.router");
 const tshirtsRouter = require("./tshirts.router");
+const uploadRouter = require("./upload.router");
+const teepriceRouter = require("./teeprice.router");
 
 function routerApi(app) {
   const router = express.Router();
@@ -16,6 +18,8 @@ function routerApi(app) {
   router.use("/colors", colorsRouter);
   router.use("/localDesigns", localDesignsRouter);
   router.use("/tshirts", tshirtsRouter);
+  router.use("/upload", uploadRouter);
+  router.use("/teeprice", teepriceRouter);
 }
 
 module.exports = routerApi;
