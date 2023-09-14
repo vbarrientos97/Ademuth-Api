@@ -7,7 +7,7 @@ const config = {
   dbPassword: process.env.DB_PASSWORD || "admin",
   dbHost: process.env.DB_HOST || "localhost",
   dbName: process.env.DB_NAME || "verodb",
-  dbPort: process.env.DB_PORT || 5432,
+  dbPort: process.env.DB_PORT,
 };
 
 module.exports = { config };
