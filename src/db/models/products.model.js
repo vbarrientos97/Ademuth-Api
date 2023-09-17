@@ -26,7 +26,7 @@ const ProductSchema = {
     field: "name",
   },
   size: {
-    allowNull: false,
+    allowNull: true,
     type: DataTypes.STRING,
     field: "size",
   },
